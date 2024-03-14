@@ -62,7 +62,7 @@ public:
         update(2 * idx + 1, low, mid, l, r, value);
         update(2 * idx + 2, mid + 1, high, l, r, value);
 
-        seg[idx] + seg[2 * idx + 1] + seg[2 * idx + 2];
+        seg[idx] = seg[2 * idx + 1] + seg[2 * idx + 2];
     }
 
     int query(int idx, int low, int high, int l, int r)
